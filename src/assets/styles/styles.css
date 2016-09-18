@@ -1,0 +1,18 @@
+/* Global styles */
+@import './colors.css';
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+
+    /* Helps fonts on OSX look more consistent with other systems */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:global {
+
+
+
+}

@@ -1,0 +1,9 @@
+
+import test from 'ava';
+import store from './{{ dashCase featureName }}.store';
+
+
+test('default store export', t => {
+    store.name = 'todo'
+    t.is(store.name, 'todo');
+})

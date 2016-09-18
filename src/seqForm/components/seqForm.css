@@ -1,0 +1,121 @@
+:root {
+    --color-seqform-success: hsl(120, 42%, 54%);
+    --color-seqform-warning: hsl(49, 100%, 62%);
+    --color-seqform-error: hsl(12, 100%, 54%);
+    --color-seqform-active: hsl(226, 10%, 55%);
+    --color-seqform-circle: hsl(0, 0%, 77%);
+    --color-seqform-circle-inner: hsl(0, 0%, 100%);
+    --color-seqform-circle-text: hsl(226, 10%, 55%);
+    --color-seqform-text: hsl(226, 15%, 83%);
+}
+
+.steps {
+    min-width: 505px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-seqform-circle);
+    display: inline-block;
+    border: 4px solid;
+    border-color: var(--color-seqform-circle);
+    border-radius: 50%;
+
+    color: var(--color-seqform-circle-inner);
+    font-weight: 600;
+    text-align: center;
+    line-height: 35px;
+}
+
+.step:first-child {
+    line-height: 40px;
+}
+
+.step:nth-child(n+2) {
+    margin: 0 0 0 100px;
+    transform: translate(0, -4px);
+}
+
+.step:nth-child(n+2):before {
+    width: 75px;
+    height: 3px;
+    display: block;
+    background-color: var(--color-seqform-circle);
+    transform: translate(-95px, 21px);
+    content: '';
+}
+
+.step:after {
+    width: 150px;
+    display: block;
+    transform: translate(-55px, 3px);
+
+    color: var(--color-seqform-circle-text);
+    content: attr(data-desc);
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.step:first-child:after {
+    transform: translate(-55px, -1px);
+}
+
+.step.active {
+    border-color: var(--color-seqform-active);
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    color: var(--color-seqform-active);
+}
+
+/*.step.active:before {*/
+    /*background: linear-gradient(to right, var(--color-seqform-success) 0%,*/
+    /*var(--color-seqform-active) 100%);*/
+/*}*/
+
+.step.active:after {
+    color: var(--color-seqform-active);
+}
+
+.step.done {
+    background-color: var(--color-seqform-success);
+    border-color: var(--color-seqform-success);
+
+    color: var(--color-seqform-circle);
+}
+
+.step.done:before {
+    background-color: var(--color-seqform-success);
+}
+
+.step.warning {
+    background-color: var(--color-seqform-warning);
+    border-color: var(--color-seqform-warning);
+
+    color: var(--color-seqform-circle);
+}
+
+.step.warning:before {
+    background-color: var(--color-seqform-warning);
+}
+
+.step.error {
+    background-color: var(--color-seqform-error);
+    border-color: var(--color-seqform-error);
+
+    color: var(--color-seqform-circle);
+}
+
+.step.error:before {
+    background-color: var(--color-seqform-error);
+}
+
+.icon {
+
+    height: 20px;
+    fill: var(--color-seqform-circle-inner);
+    position: relative;
+    top: 5px;
+
+}
